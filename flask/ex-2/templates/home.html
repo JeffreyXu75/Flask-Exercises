@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h1>Home</h1>
+<p>Enter an integer to find out if it is even or odd</p>
+<input class="form-control" id="int1" placeholder="integer">
+<button type="button" id="submit" class="btn btn-primary">Submit</button>
+
+<script>
+    var input = document.getElementById("int1")
+    var btn = document.getElementById("submit")
+
+    btn.addEventListener('click', function() {
+        var userInput = input.value;
+        window.location.replace("/calc?val=" + userInput);
+    });
+</script>
+
+{% endblock content %}

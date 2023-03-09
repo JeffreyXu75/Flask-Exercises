@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h1>Calculate</h1>
+<p id="main"></p>
+
+<a href="../">Go home</a>
+
+<script>
+    const queryString = window.location.search; //Had to look up how to interact with url parameters 
+    console.log(queryString);
+    const urlParams = new URLSearchParams(queryString);
+    console.log(urlParams)
+    var variable = urlParams.get('val')
+
+    if(!(urlParams.has('val'))){
+        document.getElementById("main").innerHTML = "No number provided!";
+    }
+else if((isNaN(Number(variable)))||!Number.isInteger((Number(variable)))){ // Checked the internet for the number functions
+        document.getElementById("main").innerHTML = variable + " is not an integer!";
+    }
+    else
+    {
+        var res = "odd"
+        if (Number(variable) % 2 == 0){
+            res = "even"
+        }
+        document.getElementById("main").innerHTML = variable + " is " + res;
+
+    }
+
+
+</script>
+
+
+{% endblock content %}
