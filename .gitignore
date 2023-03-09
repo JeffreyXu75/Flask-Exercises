@@ -1,2 +1,4 @@
 
 *.pyc
+/flask/ex-1/__pycache__
+/.venv
