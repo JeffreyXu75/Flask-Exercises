@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Registered Students  <span class="sr-only">(current)</span></a>
+        </li>
+        </li>
+      </ul>
+      </form>
+    </div>
+  </nav>
+<h1>Registered Students</h1>
+<p id="main"></p>
+<p>The following students have registered for a student organization:</p>
+<table class="table">
+    <tbody>
+    {% for key, value in result.items() %}
+      <tr>
+        <td>{{ key }}</td>
+        <td>{{ value }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+<a href="../">Go home</a>
+
+
+
+
+{% endblock content %}
