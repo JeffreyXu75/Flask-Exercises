@@ -2,3 +2,5 @@
 *.pyc
 /flask/ex-1/__pycache__
 /.venv
+/flask/ex-2/__pycache__
+/flask/ex-3/__pycache__
